@@ -1,0 +1,64 @@
+<div class="container">
+  <section class="intro">
+    <div>
+      <h2>Livros</h2>
+      <p>Livros cadastrados na biblioteca.</p>
+    </div>
+
+    <a routerLink="/novo" class="btn btn-primary">Novo Livro</a>
+  </section>
+
+  @if (erro) {
+    <div class="alert alert-error">
+      {{ erro }}
+    </div>
+  }
+
+  @if (carregando) {
+    <div class="loading">
+      Carregando livros...
+    </div>
+  }
+
+  @if (!carregando && livros.length === 0 && !erro) {
+    <div class="empty-state">
+      Nenhum livro cadastrado.
+    </div>
+  }
+
+  @if (!carregando && livros.length > 0) {
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Titulo</th>
+          <th>Autor</th>
+          <th>Ano</th>
+          <th>Preco</th>
+          <th>Acoes</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        @for (livro of livros; track livro.id) {
+          <tr>
+            <td>{{ livro.id }}</td>
+            <td>{{ livro.titulo }}</td>
+            <td>{{ livro.autor }}</td>
+            <td>{{ livro.ano }}</td>
+            <td>{{ livro.preco | currency:'BRL' }}</td>
+            <td class="acoes">
+              <a [routerLink]="['/editar', livro.id]" class="btn btn-sm">
+                Editar
+              </a>
+
+              <button type="button" (click)="excluir(livro.id)" class="btn btn-sm btn-danger">
+                Excluir
+              </button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

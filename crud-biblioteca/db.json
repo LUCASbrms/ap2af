@@ -1,0 +1,18 @@
+{
+  "livros": [
+    {
+      "titulo": "Dom Casmurro",
+      "autor": "Machado de Assis",
+      "ano": 1899,
+      "preco": 29.9,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "titulo": "O Pequeno Principe",
+      "autor": "Antoine de Saint-Exupery",
+      "ano": 1943,
+      "preco": 29.9
+    }
+  ]
+}

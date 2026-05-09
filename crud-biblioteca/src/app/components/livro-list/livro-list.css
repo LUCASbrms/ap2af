@@ -1,0 +1,90 @@
+.container {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.intro h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.intro p {
+  margin: 4px 0 0;
+  color: #4b5563;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.table th {
+  background: #f3f4f6;
+}
+
+.acoes {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #4b5563;
+  color: #fff;
+  text-decoration: none;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #2563eb;
+}
+
+.btn-danger {
+  background: #dc2626;
+}
+
+.btn-sm {
+  padding: 7px 10px;
+  font-size: 14px;
+}
+
+.alert {
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 6px;
+}
+
+.alert-error {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.loading,
+.empty-state {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
